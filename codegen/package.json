@@ -1,0 +1,14 @@
+{
+  "name": "codegen",
+  "version": "0.0.0",
+  "type": "module",
+  "bin": {
+    "codegen": "./bin/main.js"
+  },
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.2"
+  }
+}

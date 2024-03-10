@@ -1,0 +1,17 @@
+{
+    "useDaemonProcess": false,
+    "targetDefaults": {
+        "build": {
+            "cache": true,
+            "dependsOn": ["^build", "codegen"],
+            "inputs": ["{projectRoot}/src/**/*", "{projectRoot}/src/**/*"],
+            "outputs": ["{projectRoot}/dist/**/*"]
+        },
+        "codegen": {
+            "cache": true,
+            "dependsOn": [{"projects": ["codegen"], "target": "build"}],
+            "inputs": [{"dependentTasksOutputFiles": "**/*.js", "transitive": false}],
+            "outputs": ["{projectRoot}/gen/**/*"]
+        }
+    }
+}
